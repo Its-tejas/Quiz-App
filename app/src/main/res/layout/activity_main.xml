@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/timerTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:textStyle="bold"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/startQuizBtn"
+        android:text="Start Quiz"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/quizContainer"
+        android:visibility="invisible"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/queTextview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="22dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ans1btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/queTextview"
+            android:layout_marginBottom="7dp"
+            android:background="@color/Grey"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="19sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ans2btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ans1btn"
+            android:layout_marginBottom="7dp"
+            android:background="@color/Grey"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ans3btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ans2btn"
+            android:layout_marginBottom="7dp"
+            android:background="@color/Grey"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ans4btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ans3btn"
+            android:layout_marginBottom="7dp"
+            android:background="@color/Grey"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ans4btn"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentEnd="true"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/restartBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/quizContainer"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:text="Restart"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:visibility="invisible" />
+
+    <TableLayout
+        android:id="@+id/resultContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:visibility="invisible">
+
+        <TableRow   android:background="@color/Grey">
+            <TextView
+                android:text="Correct"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="21sp"
+                android:gravity="center"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:text="Wrong"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="21sp"
+                android:gravity="center"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="Not Attempt"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="21sp"
+                android:gravity="center"
+                android:layout_weight="1" />
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/correctResultTV"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="21sp"
+                android:gravity="center"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/wrongResultTV"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="21sp"
+                android:gravity="center"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/notAttemptResultTV"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="21sp"
+                android:gravity="center"
+                android:layout_weight="1" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>
